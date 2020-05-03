@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Adventures with poorly tested code</title>
-    <link>http://athulsuresh.com/tags/</link>
+    <link>http://crunchbang.github.io/tags/</link>
     <description>Recent content in Tags on Adventures with poorly tested code</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="http://athulsuresh.com/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://crunchbang.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
