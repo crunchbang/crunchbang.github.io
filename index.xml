@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Adventures with poorly tested code</title>
+    <link>http://athulsuresh.com/</link>
+    <description>Recent content on Adventures with poorly tested code</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 03 May 2020 15:14:05 +0530</lastBuildDate>
+    
+	<atom:link href="http://athulsuresh.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hello World</title>
+      <link>http://athulsuresh.com/posts/hello-world/</link>
+      <pubDate>Sun, 03 May 2020 15:14:05 +0530</pubDate>
+      
+      <guid>http://athulsuresh.com/posts/hello-world/</guid>
+      <description>Hello!
+Is there anybody out there?
+Nod if you can hear me</description>
+    </item>
+    
+  </channel>
+</rss>
