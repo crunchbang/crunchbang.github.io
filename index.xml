@@ -6,10 +6,21 @@
     <description>Recent content on Adventures with poorly tested code</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 03 May 2020 19:47:13 +0530</lastBuildDate>
+    <lastBuildDate>Sat, 16 May 2020 15:49:17 +0530</lastBuildDate>
     
 	<atom:link href="https://crunchbang.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Wrong Tool For The Job: Concurrent Queues with Aerospike</title>
+      <link>https://crunchbang.github.io/posts/wrong-tool/</link>
+      <pubDate>Sat, 16 May 2020 15:49:17 +0530</pubDate>
+      
+      <guid>https://crunchbang.github.io/posts/wrong-tool/</guid>
+      <description>If all you have is a hammer . . . Organizational choices and system architecture sometimes forces you to use sub-optimal tools for a problem. In fact, this is part of the challenge that work throws at you - having to retrofit or abuse tools to get the job done.
+If you always had the right set of tools, what fun would life be? This is one such problem.
+The Problem We had an antiquated use case which allowed customers to create a deferred list of jobs.</description>
+    </item>
     
     <item>
       <title>Bug Story: It&#39;s not you, it&#39;s the environment</title>
