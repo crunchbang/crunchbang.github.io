@@ -6,10 +6,41 @@
     <description>Recent content on Adventures with poorly tested code</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 16 May 2020 15:49:17 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 16 Jun 2020 17:11:27 +0530</lastBuildDate>
     
 	<atom:link href="https://crunchbang.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>/books</title>
+      <link>https://crunchbang.github.io/posts/books/</link>
+      <pubDate>Tue, 16 Jun 2020 17:11:27 +0530</pubDate>
+      
+      <guid>https://crunchbang.github.io/posts/books/</guid>
+      <description>I am one of those people who need to write things down to fully understand and assimilate a foreign piece of information. Writing forces me to put into words that abstract mass of obscure blob of thought which I manifest into existence whenever I encounter a new topic. It helps me structure my understanding, and often times makes me aware of gaping holes in my understanding of the topic. Naturally, I take copious amounts of notes whenever I read a technical book / paper.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://crunchbang.github.io/about/</link>
+      <pubDate>Tue, 16 Jun 2020 17:11:27 +0530</pubDate>
+      
+      <guid>https://crunchbang.github.io/about/</guid>
+      <description>Hello! I&amp;rsquo;m a programmer from a small town in Kerala, in the southern part of India.
+I&amp;rsquo;m currently tinkering with a wide range of systems at a cloud telephony startup in Bangalore.
+Find me around the web under the following handles:
+ stackoverflow/athul.sure codechef/crunchbang_ goodreads/athulsure twitter/@hashb42 codewars/crunchbang123  Find the code for this site at here!</description>
+    </item>
+    
+    <item>
+      <title>Linux Kernel Development</title>
+      <link>https://crunchbang.github.io/books/linux-kernel-development/</link>
+      <pubDate>Tue, 16 Jun 2020 16:10:46 +0530</pubDate>
+      
+      <guid>https://crunchbang.github.io/books/linux-kernel-development/</guid>
+      <description>This book had been on my TO-READ list for a long time. It came up again while I was perusing Dan Luu&amp;rsquo;s Programming book list. I&amp;rsquo;ve always wanted to look behind the curtains and see how the magic worked, so I finally bought it.
+I used bootlin to read through Linux 5.7.2 source. They provide a really good search system and linked definitions. The book describes kernel version 2.6. You might want to keep this site open to see how things have changed since then.</description>
+    </item>
     
     <item>
       <title>Wrong Tool For The Job: Concurrent Queues with Aerospike</title>

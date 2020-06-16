@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Linux Kernel Development - Adventures with poorly tested code</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:title" content="Linux Kernel Development" />
+<meta property="og:description" content="This book had been on my TO-READ list for a long time. It came up again while I was perusing Dan Luu&rsquo;s Programming book list. I&rsquo;ve always wanted to look behind the curtains and see how the magic worked, so I finally bought it.
+I used bootlin to read through Linux 5.7.2 source. They provide a really good search system and linked definitions. The book describes kernel version 2.6. You might want to keep this site open to see how things have changed since then." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://crunchbang.github.io/books/linux-kernel-development/" />
+<meta property="article:published_time" content="2020-06-16T16:10:46+05:30" />
+<meta property="article:modified_time" content="2020-06-16T16:10:46+05:30" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Linux Kernel Development"/>
+<meta name="twitter:description" content="This book had been on my TO-READ list for a long time. It came up again while I was perusing Dan Luu&rsquo;s Programming book list. I&rsquo;ve always wanted to look behind the curtains and see how the magic worked, so I finally bought it.
+I used bootlin to read through Linux 5.7.2 source. They provide a really good search system and linked definitions. The book describes kernel version 2.6. You might want to keep this site open to see how things have changed since then."/>
+<script src="https://crunchbang.github.io/js/feather.min.js"></script>
+	
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" media="screen" href="https://crunchbang.github.io/css/main.css" />
+</head><body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://crunchbang.github.io/">Adventures with poorly tested code</a>
+	</div>
+	<nav>
+		
+		<a href="/">Home</a>
+		
+		<a href="/posts">All posts</a>
+		
+		<a href="/books">Books</a>
+		
+		<a href="/about">About</a>
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">Linux Kernel Development</h1>
+			<div class="meta">Posted on Jun 16, 2020</div>
+		</div>
+		
+
+		<section class="body">
+			<p>This book had been on my TO-READ list for a long time. It came up again while I was perusing <a href="https://danluu.com/programming-books/">Dan Luu&rsquo;s Programming book list</a>. I&rsquo;ve always wanted to look behind the curtains and see how the magic worked, so I finally bought it.</p>
+<p>I used <a href="https://elixir.bootlin.com/linux/v5.7.2/C/ident/task_struct">bootlin</a> to read through Linux 5.7.2 source. They provide a really good search system and linked definitions. The book describes kernel version 2.6. You might want to keep this site open to see how things have changed since then.</p>
+<h1 id="notes">Notes</h1>
+<h2 id="process--threads">Process &amp; Threads</h2>
+<p>A process begins it life with <code>fork()</code></p>
+<p><code>fork()</code> [Create a copy of the current running process] -&gt; <code>exec()</code> [Load a binary into memory] -&gt; <code>exit()</code></p>
+<p>Metadata about each process is stored in a <code>task_struct</code>. Info about all processes are maintained in a linked-list called the tasklist. They&rsquo;re often referred to as process descriptors.</p>
+<p><code>thread_info</code> struct is present at the bottom of the stack (for stacks that grow down). This allows for a lot of neat optimizations whereby the <code>thread_info</code> of the current process can be computed and found pretty quickly(review).</p>
+<p><code>fork()</code> is implemented through Copy-On-Write (COW) pages. Resources are duplicated only when they are modified. The gain comes through not duplicating the address space!</p>
+<p>Threads in linux are no different from processes. Each thread has it&rsquo;s own <code>task_struct</code> and is scheduled like any other task. Certain params in the <code>task_struct</code> have common values to indicate that resources are shared. This is different from Windows where threads are seen as lightweight processes, where the kernel has explicit support for dealing with threads.</p>
+<p>Kernel threads are a special class of threads that run only in kernel space. Forked from <code>kthreadd</code> for performing special ops like flush, ksoftirqd.</p>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			
+		</div>
+	</article>
+</main>
+<footer>
+<hr><a class="soc" href="https://github.com/crunchbang" title="Github"><i data-feather="github"></i></a>|<a class="soc" href="https://twitter.com/hashb42" title="Twitter"><i data-feather="twitter"></i></a>|<a class="soc" href="https://www.linkedin.com/in/athul-suresh-572622147/" title="LinkedIn"><i data-feather="linkedin"></i></a>|⚡️
+	2020  <a href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
+</footer>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-165415128-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+<script>
+      feather.replace()
+</script>
+
+</div>
+    </body>
+</html>
