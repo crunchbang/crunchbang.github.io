@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Adventures with poorly tested code</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 16 Jun 2020 17:11:27 +0530</lastBuildDate>
+    <lastBuildDate>Fri, 24 Jul 2020 00:03:32 +0530</lastBuildDate>
     
 	<atom:link href="https://crunchbang.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>A tale of two DBs</title>
+      <link>https://crunchbang.github.io/posts/unify-db/</link>
+      <pubDate>Fri, 24 Jul 2020 00:03:32 +0530</pubDate>
+      
+      <guid>https://crunchbang.github.io/posts/unify-db/</guid>
+      <description>Background Work always manages to throw interesting problems my way and this one was particularly interesting. Our telephone server infrastructure and the associated cloud services were spread across two AWS regions - Singapore &amp;amp; Mumbai. This was primarily done to comply with Indian Data Protection Laws which mandated that customer data associated with some critical areas of business must stay within the country. We had run these two regions as independent entities, with code changes being deployed uniformly across them.</description>
+    </item>
     
     <item>
       <title>/books</title>
