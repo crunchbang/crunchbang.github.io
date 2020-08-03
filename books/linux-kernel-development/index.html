@@ -94,8 +94,18 @@ I used bootlin to read through Linux 5.7.2 source. They provide a really good se
 <p>Just when you thought you couldn&rsquo;t need another locking mechanism, the kernel throws <code>seqlocks</code> in your face. This is sort of like the RW locks seen earlier, with the difference being that writers are preferred over readers. Each locked data is associated with a sequence counter (which is the thing that&rsquo;s protected by the lock). During a write, the counter is incremented. A read operation checks the sequence counter prior to and after the read. A read succeeds(as in, a write did not happen in between), if the values match. Thus, writers are never blocked, and dirty reads would just cause the reader to retry the read until the counter conditions are satisfied.</p>
 <h2 id="ordering--barriers">Ordering &amp; Barriers</h2>
 <p>The processor and compiler might reorder memory accesses (reads and write) in code for a variety of reasons which might break some implicit assumptions that the code relies on. Barriers can be used to enforce the ordering and to indicate to the compiler / processor to maintain the order of operations. <code>mb()/rmb()/wmb()</code> provide memory barrier / read memory barrier / write memory barrier which ensure that rw / reads / writes are not reordered across them i.e all corresponding ops before the barrier are guaranteed to complete before the ops after it.</p>
-<h1 id="q">Q</h1>
-<p>Does the fact that spinlocks disable preemption in the kernel apply to userland programs too? Can a user program hold a spinlock and not be preempted? Seems unlikely.</p>
+<h2 id="memory-management">Memory Management</h2>
+<p>Pages are treated as the smallest unit of memory management. Memory is divided in multiple zone, each zone with a particular characteristic (DMA, normal, high memory etc). Allocations will never cross zone boundaries. Pages returned to user-space are zeroed out to ensure security. <code>kmalloc</code> allocates memory that is physically contiguous while <code>vmalloc</code> allocates memory that is contiguous in the virtual address space.</p>
+<h2 id="file-managements">File Managements</h2>
+<p>VFS abstraction layers allows userland programs to be agnostic of the underlying fs. Main components: superblock, inode, dentry, file.</p>
+<h2 id="block-devices">Block Devices</h2>
+<p>Sectors, blocks, buffers, and buffer heads. The IO scheduler mergers and sorts requests on the block device to maximize &ldquo;global&rdquo; throughput. Anticipatory, deadline, completely fair queuing, and noop variant.</p>
+<h1 id="todo">TODO</h1>
+<h2 id="interesting-but-not-interesting-enough-for-now">Interesting but not interesting enough for now</h2>
+<ul>
+<li>Interrupt Handler Bottoms - softirq, tasklets</li>
+<li>Slab allocator</li>
+</ul>
 
 		</section>
 
