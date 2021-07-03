@@ -4,6 +4,11 @@ date: 2020-06-16T17:11:27+05:30
 draft: false
 description: "There's a new /books section"
 tldr: "Check out /books"
+
+lastmod: 2020-06-16T17:11:27+05:30
+authors: ["athul"]
+categories:
+  - blog
 ---
 
 I am one of those people who need to write things down to fully understand and assimilate a foreign piece of information. Writing forces me to put into words that abstract mass of obscure blob of thought which I manifest into existence whenever I encounter a new topic. It helps me structure my understanding, and often times makes me aware of gaping holes in my understanding of the topic. Naturally, I take copious amounts of notes whenever I read a technical book / paper.

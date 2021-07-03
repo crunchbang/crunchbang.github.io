@@ -2,6 +2,11 @@
 title: "Linux Kernel Development"
 date: 2020-06-16T16:10:46+05:30
 draft: false
+
+lastmod: 2020-06-16T16:10:46+05:30
+authors: ["athul"]
+categories:
+  - linux
 ---
 
 This book had been on my TO-READ list for a long time. It came up again while I was perusing [Dan Luu's Programming book list](https://danluu.com/programming-books/). I've always wanted to look behind the curtains and see how the magic worked, so I finally bought it. 

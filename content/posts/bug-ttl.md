@@ -4,6 +4,14 @@ date: 2020-05-03T19:47:13+05:30
 description: "TTL, SEGFAULT and a trip down the deployment pipeline."
 draft: false
 tldr: "Trust no-one. RTFM!"
+
+lastmod: 2020-05-03T19:47:13+05:30
+authors: ["athul"]
+categories:
+  - bug
+tags:
+  - aerospike
+  - deployment
 ---
 
 It all started with a deployment to the production cluster. 

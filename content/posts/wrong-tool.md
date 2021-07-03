@@ -4,6 +4,13 @@ date: 2020-05-16T15:49:17+05:30
 draft: false
 description: "Abusing aerospike for fun & profit!"
 tldr: "The right tool is relative!"
+
+lastmod: 2020-05-16T15:49:17+05:30
+authors: ["athul"]
+categories:
+  - feature
+tags:
+  - aerospike
 ---
 
 ## If all you have is a hammer . . .

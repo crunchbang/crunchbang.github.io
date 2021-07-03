@@ -4,6 +4,13 @@ date: 2020-07-24T00:03:32+05:30
 draft: false
 description: "Joining the un-joinable"
 tldr: "Dump & Merge"
+
+lastmod: 2020-07-24T00:03:32+05:30
+authors: ["athul"]
+categories:
+  - db
+tags:
+  - mysql
 ---
 
 ## Background

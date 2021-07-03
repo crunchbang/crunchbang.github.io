@@ -4,6 +4,11 @@ date: 2020-05-03T15:14:05+05:30
 description: "And so it begins!"
 draft: false
 tldr: "Comfortably numb"
+
+lastmod: 2020-05-03T15:14:05+05:30
+authors: ["athul"]
+categories:
+  - blog
 ---
 
 Hello!
