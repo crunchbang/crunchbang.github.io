@@ -15,7 +15,7 @@ enableEmoji = true
 defaultContentLanguage = "en"
 
 [params.info]
-description = "Adventures With Poorly Tested Code"
+description = "adventures with poorly tested code"
 title404 = "What you seek is seeking you."
 
 [params.assets]
@@ -58,19 +58,19 @@ twitter = "https://twitter.com/hashb42"
 linkedin = "https://www.linkedin.com/in/athul-suresh-572622147/"
 
 [params.comments]
-enable = false
+enable = true
 
 # TODO: Give this a try!
 # Utterances: https://utteranc.es
 [params.comments.utterances]
-enable = false
+enable = true
 issueTerm = "pathname" # pathname / url / title / og:title / <string>
-label = ""
+label = "comment"
 theme = "github-light"
 
 [params.comments.utterances.github]
-username = "MunifTanjim"
-repository = "minimo"
+username = "crunchbang"
+repository = "crunchbang.github.io"
 
 # TODO: Figure this out
 [params.search]
