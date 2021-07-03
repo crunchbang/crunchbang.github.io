@@ -53,9 +53,9 @@ sidebar = ["about","search","sidebar_menu","taxonomy_cloud"]
 footer = ["social_menu"]
 
 [params.social]
-github = "https://github.com/crunchbang"
-twitter = "https://twitter.com/hashb42"
-linkedin = "https://www.linkedin.com/in/athul-suresh-572622147/"
+github = "crunchbang"
+twitter = "hashb42"
+linkedin = "athul-suresh-572622147"
 
 [params.comments]
 enable = true
@@ -102,9 +102,7 @@ name = "Books"
 url = "/books"
 weight = 3
 
-
 # [[menu.main]]
-# name = "Repo"
-# weight = -10
-# identifier = "repository"
-# url = "https://github.com/MunifTanjim/minimo"
+# name = "TIL"
+# url = "/til"
+# weight = 4
