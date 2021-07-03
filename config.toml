@@ -1,18 +1,90 @@
 baseURL = "https://crunchbang.github.io/"
 languageCode = "en-us"
-title = "Adventures With Poorly Tested Code"
-theme = "archie"
+title = "Core Dump"
 publishDir = "docs"
+theme = "minimo"
 
-# Your Google analytics code.
 googleAnalytics = "UA-165415128-1"
 
-[params]
-    # Blog subtitle which appears below blog title. Supports markdown.
-    #subtitle = "Bug stories"
+Paginate = 10
+preserveTaxonomyNames = true
+enableRobotsTXT = true # generate robots.txt
+pygmentsCodefences = true
+enableEmoji = true
+# Missing translations will default to this content language
+defaultContentLanguage = "en"
 
-    # Content types which are included in home page recent posts list.
-    mainSections = ["posts"]
+[params.info]
+description = "Adventures With Poorly Tested Code"
+title404 = "What you seek is seeking you."
+
+[params.assets]
+favicon = "favicon.ico" # TODO: Change this
+customCSS = ["css/custom.css"]
+customJS = ["js/custom.js"]
+gopher = "https://gopherize.me/gopher/af3fd44b1b18902868bdf2f2ab40a595346f5d5a" # used in 404 template ( Generator: https://gopherize.me )
+
+[params.copyright]
+prefix = ""
+holder = "athul"
+startYear = "2020"
+suffix = ""
+
+[params.settings]
+# date & time format: https://golang.org/pkg/time/
+dateFormat = "2006, Jan 02"
+listDateFormat = "2006, Jan 02"
+archiveDateFormat = "Jan 02"
+hideEntryNavigation = ["page"] # boolean / array of sections
+hideEntryMeta = ["page"] # boolean / array of sections
+showReadingTime = true
+showLastmod = true
+taxonomyCloudShuffle = true
+accentColor = "#ffcd00"
+hideMainMenu = false
+
+[params.sidebar]
+enable = false
+
+[params.widgets]
+header = ["breadcrumbs"]
+homepage = ["recent_posts"]
+sidebar = ["about","search","sidebar_menu","taxonomy_cloud"]
+footer = ["social_menu"]
+
+[params.social]
+github = "https://github.com/crunchbang"
+twitter = "https://twitter.com/hashb42"
+linkedin = "https://www.linkedin.com/in/athul-suresh-572622147/"
+
+[params.comments]
+enable = false
+
+# TODO: Give this a try!
+# Utterances: https://utteranc.es
+[params.comments.utterances]
+enable = false
+issueTerm = "pathname" # pathname / url / title / og:title / <string>
+label = ""
+theme = "github-light"
+
+[params.comments.utterances.github]
+username = "MunifTanjim"
+repository = "minimo"
+
+# TODO: Figure this out
+[params.search]
+client = "fuse" # algolia / fuse / lunr
+
+# TODO: What are taxonomies?
+[taxonomies]
+author = "authors"
+category = "categories"
+series = "series"
+tag = "tags"
+
+[permalinks]
+page = "/:slug/"
 
 # Main menu which appears below site header.
 [[menu.main]]
@@ -21,7 +93,7 @@ url = "/"
 weight = 1
 
 [[menu.main]]
-name = "All posts"
+name = "Posts"
 url = "/posts"
 weight = 2
 
@@ -30,28 +102,9 @@ name = "Books"
 url = "/books"
 weight = 3
 
-[[menu.main]]
-name = "About"
-url = "/about"
-weight = 4
 
-# Social media links which shows up on site header.
-# Uses feather icons for icons. You can [search icon names from here](https://feathericons.com/).
-[[params.social]]
-name = "Github"
-icon = "github"
-url = "https://github.com/crunchbang"
-
-[[params.social]]
-name = "Twitter"
-icon = "twitter"
-url = "https://twitter.com/hashb42"
-
-[[params.social]]
-name = "LinkedIn"
-icon = "linkedin"
-url = "https://www.linkedin.com/in/athul-suresh-572622147/"
-
-# Enable tags.
-[taxonomies]
-   tag = "tags"
+# [[menu.main]]
+# name = "Repo"
+# weight = -10
+# identifier = "repository"
+# url = "https://github.com/MunifTanjim/minimo"
