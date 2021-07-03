@@ -1,3 +1,7 @@
-# adventures-with-code
+## README
 
-Personal github-page powered by Hugo.
+ Code for my personal blog. 
+
+ Made with 🧡 and [Hugo](https://gohugo.io/)
+
+ Theme: [Minimo](https://github.com/MunifTanjim/minimo)

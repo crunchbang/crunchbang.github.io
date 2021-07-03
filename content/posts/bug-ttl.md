@@ -80,14 +80,14 @@ On checking the library version in one of the instances, I found that it had
 an older version of the lib installed. Suspecting something wrong with the
 deployment, I pulled up the deployment scripts, expecting to see something amiss.
 The Aerospike client deployment part was pretty straight forward:
-```
+{{< highlight bash >}}
 # script set up
 cd /usr/src
 wget https://s3.xyz.com/abc/aerospike_client.zip -O aerospike_client.zip
 unzip aerospike_client.zip
 cd <unzipped dir>
 # make and install 
-```
+{{< /highlight >}}
 Things looks right. Nothing out of place. I ran just the client deployment script and checked again. It was still showing
 the older version of the library! 
 
