@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>blog on Core Dump</title>
+    <link>https://crunchbang.github.io/categories/blog/</link>
+    <description>Recent content in blog on Core Dump</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 16 Jun 2020 17:11:27 +0530</lastBuildDate><atom:link href="https://crunchbang.github.io/categories/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>/books</title>
+      <link>https://crunchbang.github.io/posts/books/</link>
+      <pubDate>Tue, 16 Jun 2020 17:11:27 +0530</pubDate>
+      
+      <guid>https://crunchbang.github.io/posts/books/</guid>
+      <description>I am one of those people who need to write things down to fully understand and assimilate a foreign piece of information. Writing forces me to put into words that abstract mass of obscure blob of thought which I manifest into existence whenever I encounter a new topic. It helps me structure my understanding, and often times makes me aware of gaping holes in my understanding of the topic. Naturally, I take copious amounts of notes whenever I read a technical book / paper.</description>
+    </item>
+    
+    <item>
+      <title>Hello World</title>
+      <link>https://crunchbang.github.io/posts/hello-world/</link>
+      <pubDate>Sun, 03 May 2020 15:14:05 +0530</pubDate>
+      
+      <guid>https://crunchbang.github.io/posts/hello-world/</guid>
+      <description>Hello!
+Is there anybody out there?
+Nod if you can hear me
+This blog is my poor attempt to document all the werid bugs I have encountered in production and the valuable lessons they&amp;rsquo;ve taught me.
+It took me 5 attempts just to get this page up and running. Hmm. There must be story here that I can stretch to a blog post.</description>
+    </item>
+    
+  </channel>
+</rss>

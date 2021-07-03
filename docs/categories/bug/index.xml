@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>bug on Core Dump</title>
+    <link>https://crunchbang.github.io/categories/bug/</link>
+    <description>Recent content in bug on Core Dump</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 03 May 2020 19:47:13 +0530</lastBuildDate><atom:link href="https://crunchbang.github.io/categories/bug/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bug Story: It&#39;s not you, it&#39;s the environment</title>
+      <link>https://crunchbang.github.io/posts/bug-ttl/</link>
+      <pubDate>Sun, 03 May 2020 19:47:13 +0530</pubDate>
+      
+      <guid>https://crunchbang.github.io/posts/bug-ttl/</guid>
+      <description>It all started with a deployment to the production cluster.
+It always does. The worst things happen when you deploy to prod.
+Background In our production cluster, we use Aerospike as the primary data store, with data being synced to MySQL for long term storage. For the uninitiated, Aerospike is a high speed, distributed key-value NoSQL database which provides a lot of cool features. Check it out if you haven&amp;rsquo;t already.</description>
+    </item>
+    
+  </channel>
+</rss>

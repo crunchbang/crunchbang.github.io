@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>db on Core Dump</title>
+    <link>https://crunchbang.github.io/categories/db/</link>
+    <description>Recent content in db on Core Dump</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 24 Jul 2020 00:03:32 +0530</lastBuildDate><atom:link href="https://crunchbang.github.io/categories/db/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A Tale Of Two DBs</title>
+      <link>https://crunchbang.github.io/posts/unify-db/</link>
+      <pubDate>Fri, 24 Jul 2020 00:03:32 +0530</pubDate>
+      
+      <guid>https://crunchbang.github.io/posts/unify-db/</guid>
+      <description>Background Work always manages to throw interesting problems my way and this one was particularly interesting. Our telephone server infrastructure and the associated cloud services were spread across two AWS regions - Singapore &amp;amp; Mumbai. This was primarily done to comply with Indian Data Protection Laws which mandated that customer data associated with some critical areas of business must stay within the country. We had run these two regions as independent entities, with code changes being deployed uniformly across them.</description>
+    </item>
+    
+  </channel>
+</rss>
