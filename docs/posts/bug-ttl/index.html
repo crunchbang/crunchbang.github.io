@@ -188,14 +188,14 @@ deeper (God, when will this stop?!!).</p>
 <p>On checking the library version in one of the instances, I found that it had
 an older version of the lib installed. Suspecting something wrong with the
 deployment, I pulled up the deployment scripts, expecting to see something amiss.
-The Aerospike client deployment part was pretty straight forward:</p>
-<pre><code># script set up
+The Aerospike client deployment part was pretty straight forward:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># script set up</span>
 cd /usr/src
 wget https://s3.xyz.com/abc/aerospike_client.zip -O aerospike_client.zip
 unzip aerospike_client.zip
 cd &lt;unzipped dir&gt;
-# make and install 
-</code></pre><p>Things looks right. Nothing out of place. I ran just the client deployment script and checked again. It was still showing
+<span style="color:#75715e"># make and install </span></code></pre></div>
+Things looks right. Nothing out of place. I ran just the client deployment script and checked again. It was still showing
 the older version of the library!</p>
 <p>Super werid.</p>
 <p>Somehow it dawned on me to check the man pages for unzip. Usually when you
