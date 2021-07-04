@@ -28,6 +28,16 @@ I thought I&amp;rsquo;d change the theme and tweak things a bit just for the sak
     </item>
     
     <item>
+      <title>Un-implementable Interfaces In Go</title>
+      <link>https://crunchbang.github.io/log/20210507/</link>
+      <pubDate>Fri, 07 May 2021 18:03:49 +0530</pubDate>
+      
+      <guid>https://crunchbang.github.io/log/20210507/</guid>
+      <description>Recently, I started randomly going through the Go standard library, mostly to satiate my curiosity and to find out what goes on behind the curtains. While checking out the testing package, I found this interesting little snippet of code in src/testing/testing.go:
+// TB is the interface common to T and B. type TB interface { Cleanup(func()) Error(args ...interface{}) Errorf(format string, args ...interface{}) Fail() FailNow() Failed() bool Fatal(args ...interface{}) Fatalf(format string, args .</description>
+    </item>
+    
+    <item>
       <title>A Tale Of Two DBs</title>
       <link>https://crunchbang.github.io/posts/unify-db/</link>
       <pubDate>Fri, 24 Jul 2020 00:03:32 +0530</pubDate>

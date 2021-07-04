@@ -27,5 +27,15 @@ The primary impediment I faced here was the amount of time it took to create a w
 I thought I&amp;rsquo;d change the theme and tweak things a bit just for the sake of it. Lo and behold, I ended up spending an entire day trying out themes and tweaking knobs and controls to see how things looked.</description>
     </item>
     
+    <item>
+      <title>Un-implementable Interfaces In Go</title>
+      <link>https://crunchbang.github.io/log/20210507/</link>
+      <pubDate>Fri, 07 May 2021 18:03:49 +0530</pubDate>
+      
+      <guid>https://crunchbang.github.io/log/20210507/</guid>
+      <description>Recently, I started randomly going through the Go standard library, mostly to satiate my curiosity and to find out what goes on behind the curtains. While checking out the testing package, I found this interesting little snippet of code in src/testing/testing.go:
+// TB is the interface common to T and B. type TB interface { Cleanup(func()) Error(args ...interface{}) Errorf(format string, args ...interface{}) Fail() FailNow() Failed() bool Fatal(args ...interface{}) Fatalf(format string, args .</description>
+    </item>
+    
   </channel>
 </rss>

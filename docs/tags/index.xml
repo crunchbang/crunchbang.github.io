@@ -6,7 +6,16 @@
     <description>Recent content in Tags on Core Dump</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 24 Jul 2020 00:03:32 +0530</lastBuildDate><atom:link href="https://crunchbang.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 07 May 2021 18:03:49 +0530</lastBuildDate><atom:link href="https://crunchbang.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>go</title>
+      <link>https://crunchbang.github.io/tags/go/</link>
+      <pubDate>Fri, 07 May 2021 18:03:49 +0530</pubDate>
+      
+      <guid>https://crunchbang.github.io/tags/go/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>mysql</title>
       <link>https://crunchbang.github.io/tags/mysql/</link>

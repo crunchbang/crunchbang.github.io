@@ -2,21 +2,21 @@
 <html lang='en' dir='auto'><head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='I realized that I hadn&rsquo;t touched my blog in over a year. A lot had happened since then, but I hadn&rsquo;t taken the time to note anything down. Looking through my old posts, I remember how good it felt to actually sit and write things down.
-I thought I&rsquo;d change the theme and tweak things a bit just for the sake of it. Lo and behold, I ended up spending an entire day trying out themes and tweaking knobs and controls to see how things looked.'>
+<meta name='description' content='Recently, I started randomly going through the Go standard library, mostly to satiate my curiosity and to find out what goes on behind the curtains. While checking out the testing package, I found this interesting little snippet of code in src/testing/testing.go:
+// TB is the interface common to T and B. type TB interface { Cleanup(func()) Error(args ...interface{}) Errorf(format string, args ...interface{}) Fail() FailNow() Failed() bool Fatal(args ...interface{}) Fatalf(format string, args .'>
 <meta name='theme-color' content='#ffcd00'>
 
-<meta property='og:title' content='Back After A Hiatus • athul'>
-<meta property='og:description' content='I realized that I hadn&rsquo;t touched my blog in over a year. A lot had happened since then, but I hadn&rsquo;t taken the time to note anything down. Looking through my old posts, I remember how good it felt to actually sit and write things down.
-I thought I&rsquo;d change the theme and tweak things a bit just for the sake of it. Lo and behold, I ended up spending an entire day trying out themes and tweaking knobs and controls to see how things looked.'>
-<meta property='og:url' content='https://crunchbang.github.io/log/20210703/'>
+<meta property='og:title' content='Un-implementable Interfaces In Go • athul'>
+<meta property='og:description' content='Recently, I started randomly going through the Go standard library, mostly to satiate my curiosity and to find out what goes on behind the curtains. While checking out the testing package, I found this interesting little snippet of code in src/testing/testing.go:
+// TB is the interface common to T and B. type TB interface { Cleanup(func()) Error(args ...interface{}) Errorf(format string, args ...interface{}) Fail() FailNow() Failed() bool Fatal(args ...interface{}) Fatalf(format string, args .'>
+<meta property='og:url' content='https://crunchbang.github.io/log/20210507/'>
 <meta property='og:site_name' content='Core Dump'>
-<meta property='og:type' content='article'><meta property='article:section' content='log'><meta property='article:published_time' content='2021-07-03T18:03:49&#43;05:30'/><meta property='article:modified_time' content='2021-07-04T18:03:49&#43;05:30'/><meta name='twitter:card' content='summary'>
+<meta property='og:type' content='article'><meta property='article:section' content='log'><meta property='article:tag' content='go'><meta property='article:published_time' content='2021-05-07T18:03:49&#43;05:30'/><meta property='article:modified_time' content='2021-05-07T18:03:49&#43;05:30'/><meta name='twitter:card' content='summary'>
 
 <meta name="generator" content="Hugo 0.84.4" />
 
-  <title>Back After A Hiatus • athul</title>
-  <link rel='canonical' href='https://crunchbang.github.io/log/20210703/'>
+  <title>Un-implementable Interfaces In Go • athul</title>
+  <link rel='canonical' href='https://crunchbang.github.io/log/20210507/'>
   
   
   <link rel='icon' href='/favicon.ico'>
@@ -59,7 +59,7 @@ if (!doNotTrack) {
     <style>.widget-breadcrumbs li:after{content:'\2f '}</style>
   <section class='widget widget-breadcrumbs sep-after'>
     <nav id='breadcrumbs'>
-      <ol><li><a href='/'>Home</a></li><li><a href='/log/'>Logs</a></li><li><span>Back After A Hiatus</span></li></ol>
+      <ol><li><a href='/'>Home</a></li><li><a href='/log/'>Logs</a></li><li><span>Un-implementable Interfaces In Go</span></li></ol>
     </nav>
   </section></div>
       </div>
@@ -78,7 +78,7 @@ if (!doNotTrack) {
   <header class='header entry-header'>
   <div class='container sep-after'>
     <div class='header-info'>
-      <h1 class='title'>Back After A Hiatus</h1>
+      <h1 class='title'>Un-implementable Interfaces In Go</h1>
       
 
     </div>
@@ -97,7 +97,7 @@ if (!doNotTrack) {
 <line x1="3" y1="10" x2="21" y2="10" />
 </svg>
 <span class='screen-reader-text'>Posted on </span>
-  <time class='entry-date' datetime='2021-07-03T18:03:49&#43;05:30'>Jul 03, 2021</time>
+  <time class='entry-date' datetime='2021-05-07T18:03:49&#43;05:30'>May 07, 2021</time>
 </span>
 
   <span class='byline'><svg
@@ -138,28 +138,47 @@ One min read
   
 
   <div class='container entry-content'>
-  <p>I realized that I hadn&rsquo;t touched my blog in over a year. A lot had happened since then, but I hadn&rsquo;t taken the time to note anything down. Looking through my old posts, I remember how good it felt to actually sit and write things down.</p>
-<p>I thought I&rsquo;d change the theme and tweak things a bit just for the sake of it. Lo and behold, I ended up spending an entire day trying out themes and tweaking knobs and controls to see how things looked. Sometimes, I feel like I waste a lot of time on preliminary aspects of a task.</p>
-<p>Hopefully, I should be able to hammer out something tomorrow.</p>
+  <p>Recently, I started randomly going through the Go standard library, mostly to
+satiate my curiosity and to find out what goes on behind the curtains. While
+checking out the testing package, I found this interesting little snippet of
+code in <code>src/testing/testing.go</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#75715e">// TB is the interface common to T and B.
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">TB</span> <span style="color:#66d9ef">interface</span> {
+	<span style="color:#a6e22e">Cleanup</span>(<span style="color:#66d9ef">func</span>())
+	<span style="color:#a6e22e">Error</span>(<span style="color:#a6e22e">args</span> <span style="color:#f92672">...</span><span style="color:#66d9ef">interface</span>{})
+	<span style="color:#a6e22e">Errorf</span>(<span style="color:#a6e22e">format</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">args</span> <span style="color:#f92672">...</span><span style="color:#66d9ef">interface</span>{})
+	<span style="color:#a6e22e">Fail</span>()
+	<span style="color:#a6e22e">FailNow</span>()
+	<span style="color:#a6e22e">Failed</span>() <span style="color:#66d9ef">bool</span>
+	<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">args</span> <span style="color:#f92672">...</span><span style="color:#66d9ef">interface</span>{})
+	<span style="color:#a6e22e">Fatalf</span>(<span style="color:#a6e22e">format</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">args</span> <span style="color:#f92672">...</span><span style="color:#66d9ef">interface</span>{})
+	<span style="color:#a6e22e">Helper</span>()
+	<span style="color:#a6e22e">Log</span>(<span style="color:#a6e22e">args</span> <span style="color:#f92672">...</span><span style="color:#66d9ef">interface</span>{})
+	<span style="color:#a6e22e">Logf</span>(<span style="color:#a6e22e">format</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">args</span> <span style="color:#f92672">...</span><span style="color:#66d9ef">interface</span>{})
+	<span style="color:#a6e22e">Name</span>() <span style="color:#66d9ef">string</span>
+	<span style="color:#a6e22e">Skip</span>(<span style="color:#a6e22e">args</span> <span style="color:#f92672">...</span><span style="color:#66d9ef">interface</span>{})
+	<span style="color:#a6e22e">SkipNow</span>()
+	<span style="color:#a6e22e">Skipf</span>(<span style="color:#a6e22e">format</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">args</span> <span style="color:#f92672">...</span><span style="color:#66d9ef">interface</span>{})
+	<span style="color:#a6e22e">Skipped</span>() <span style="color:#66d9ef">bool</span>
+	<span style="color:#a6e22e">TempDir</span>() <span style="color:#66d9ef">string</span>
+
+	<span style="color:#75715e">// A private method to prevent users implementing the
+</span><span style="color:#75715e"></span>	<span style="color:#75715e">// interface and so future additions to it will not
+</span><span style="color:#75715e"></span>	<span style="color:#75715e">// violate Go 1 compatibility.
+</span><span style="color:#75715e"></span>	<span style="color:#a6e22e">private</span>()
+}
+</code></pre></div><p>This seems pretty evident once you see it. It makes sense for the Go standard
+library where the private function enables them to circumvent the compatibility
+promise by ensuring that no one would be able to use this interface outside of
+the standard library because of the private function. This gives them the
+flexibility to add functionality later without breaking anything.</p>
+<p>I wonder if there&rsquo;s a general lib out in the wild which uses this technique.</p>
 
 </div>
 
   
 <footer class='entry-footer'>
-  <div class='container sep-before'><div class='last-updated'><svg
-  class="icon"
-  xmlns="http://www.w3.org/2000/svg"
-  viewbox="0 0 24 24"
-  stroke-linecap="round"
-  stroke-linejoin="round"
-  stroke-width="2"
-  aria-hidden="true"
-><path d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34" />
-<polygon points="18 2 22 6 12 16 8 16 8 12 18 2" />
-</svg>
-<span class='screen-reader-text'>Last updated: </span>
-      <time class='entry-date' datetime='2021-07-04T18:03:49&#43;05:30'>Jul 04, 2021</time>
-    </div><div class='categories'><svg
+  <div class='container sep-before'><div class='categories'><svg
   class="icon"
   xmlns="http://www.w3.org/2000/svg"
   viewbox="0 0 24 24"
@@ -170,6 +189,18 @@ One min read
 ><path d="M22,19a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V5A2,2,0,0,1,4,3H9l2,3h9a2,2,0,0,1,2,2Z" />
 </svg>
 <span class='screen-reader-text'>Categories: </span><a class='category' href='/categories/journal/'>journal</a></div>
+<div class='tags'><svg
+  class="icon"
+  xmlns="http://www.w3.org/2000/svg"
+  viewbox="0 0 24 24"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  stroke-width="2"
+  aria-hidden="true"
+><path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z" />
+<line x1="7" y1="7" x2="7" y2="7" />
+</svg>
+<span class='screen-reader-text'>Tags: </span><a class='tag' href='/tags/go/'>go</a></div>
 
   </div>
 </footer>
@@ -178,24 +209,9 @@ One min read
 </article>
 
 <nav class='entry-nav'>
-  <div class='container'><div class='prev-entry sep-before'>
-      <a href='/log/20210507/'>
-        <span aria-hidden='true'><svg
-  class="icon"
-  xmlns="http://www.w3.org/2000/svg"
-  viewbox="0 0 24 24"
-  stroke-linecap="round"
-  stroke-linejoin="round"
-  stroke-width="2"
-  aria-hidden="true"
-><line x1="20" y1="12" x2="4" y2="12" />
-<polyline points="10 18 4 12 10 6" />
-</svg>
- Previous</span>
-        <span class='screen-reader-text'>Previous post: </span>Un-implementable Interfaces In Go</a>
-    </div><div class='next-entry sep-before'>
-      <a href='/log/20210704/'>
-        <span class='screen-reader-text'>Next post: </span>Writer&#39;s Block<span aria-hidden='true'>Next <svg
+  <div class='container'><div class='next-entry sep-before'>
+      <a href='/log/20210703/'>
+        <span class='screen-reader-text'>Next post: </span>Back After A Hiatus<span aria-hidden='true'>Next <svg
   class="icon"
   xmlns="http://www.w3.org/2000/svg"
   viewbox="0 0 24 24"
