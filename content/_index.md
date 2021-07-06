@@ -8,8 +8,7 @@ I'm **athul** (_ah-THUL_, Malayalam: അതുൽ, Hindi: अतुल)!
 
 I'm a programmer from a [small town](https://en.wikipedia.org/wiki/Muvattupuzha) in Kerala, in the southern part of India. 
 
-I've tinkered with a diverse range of stuff including file systems, cloud telephony services, and payment systems. 
-There is no grand theme or unifying thread that ties these posts together. These are mostly anecdotes, experiences, and notes that I've collected over the years. 
+There is no grand theme or unifying thread that ties these posts together. They are mostly anecdotes, experiences, and notes that I've collected over the years while I tinkered around with telephony systems and payment platforms. 
 
 _Caveat emptor_.
 
