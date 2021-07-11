@@ -6,7 +6,18 @@
     <description>Recent content in journal on Core Dump</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 06 Jul 2021 19:51:58 +0530</lastBuildDate><atom:link href="https://crunchbang.github.io/categories/journal/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 11 Jul 2021 16:09:05 +0530</lastBuildDate><atom:link href="https://crunchbang.github.io/categories/journal/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Faster Multitasking with Hammerspoon</title>
+      <link>https://crunchbang.github.io/log/20210711/</link>
+      <pubDate>Sun, 11 Jul 2021 16:09:05 +0530</pubDate>
+      
+      <guid>https://crunchbang.github.io/log/20210711/</guid>
+      <description>When I&amp;rsquo;m working, I usually have at-least 4 windows open including Slack, Chrome, iTerm and a few other stuff. Lately, I&amp;rsquo;ve noticed that switching between them via cmd+tab is turning out to be a waste of time, since the order of the apps keep changing based on how recently they were used.
+I wanted a smoother transition between my umpteen apps without getting stuck in cmd+tab hell.
+I needed static key-bindings!</description>
+    </item>
+    
     <item>
       <title>Sneaky Defers In Go</title>
       <link>https://crunchbang.github.io/log/20210706/</link>
