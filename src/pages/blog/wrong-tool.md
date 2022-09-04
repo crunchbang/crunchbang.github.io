@@ -64,13 +64,13 @@ The primary downside is that we have no way to ensure fault tolerance. If a requ
 
 ## Alternatives
 
-##### Using a SQL DB
+### Using a SQL DB
 
 Aerospike is a NoSQL datastore and thus do not provide the rich set of operations made available by SQL. As outlined in this [answer on Database Administrator](link:https://dba.stackexchange.com/questions/98311/best-way-to-implement-concurrent-table-based-queue?newreg=fdb55e93bbf64b1ca64778fd25518934), SQL databases like MySQL enables us to use a combination of `Transactions` and `SELECT FOR UPDATE` to achieve the same result, albeit with a slightly higher performance penalty.
 
 We couldn't use it for our use-case as our MySQL DB was _far too_ precious to be put under heavy load from such a bursty workflow.
 
-##### Using a Message Queue
+### Using a Message Queue
 
 A simple persistent message queue like [Beanstalkd](https://beanstalkd.github.io/) would've been a perfect fit for this problem. Message Queues have the concept of tubes, which provides a high level way to group messages, which could be used for organizing jobs from different customers into different tubes. They also provide facilities like delays, whereby a job is put back into the queue if the reserved consumer has not responded withing a stipulated time frame, which would take care of the fault tolerance aspect.
 

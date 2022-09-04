@@ -1,0 +1,27 @@
+---
+export interface Props {
+    name: string;
+    website: string; //url?
+    email: string;
+    phone: string;
+}
+
+const { name, website, email, phone } = Astro.props;
+---
+
+<section>
+    <div>
+        <div>{name}</div>
+        <div>{website}</div>
+    </div>
+    <div>
+        <div>{email}</div>
+        <div>{phone}</div>
+    </div>
+</section>
+<style>
+    section {
+        display: flex;
+        justify-content: space-between;
+    }
+</style>
