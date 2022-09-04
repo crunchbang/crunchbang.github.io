@@ -17,18 +17,18 @@ const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
     <head>
         <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
     </head>
-    <body>
+    <body class="max-w-prose">
         <Header />
         <main>
             <section>
                 <ul class="flex flex-col gap-1 list-none">
                     {
                         posts.map((post) => (
-                            <li class="flex flex-col md:flex-row-reverse md:justify-end md:items-baseline md:gap-2">
+                            <li class="flex flex-col ">
                                 <a href={post.url}>{post.frontmatter.title}</a>
                                 <time
                                     datetime={post.frontmatter.pubDate}
-                                    class="text-slate-500 font-mono text-sm"
+                                    class="font-mono text-sm text-slate-500"
                                 >
                                     {new Date(
                                         post.frontmatter.pubDate
