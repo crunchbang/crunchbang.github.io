@@ -1,18 +1,16 @@
 ---
 import ResumeHeader from "../components/resume/ResumeHeader.astro";
 import ResumeSection from "../components/resume/ResumeSection.astro";
-import BaseHead from "../components/BaseHead.astro";
+import LandingPage from "../layouts/LandingPage.astro";
 
 const title = "Resume";
 const description = "Resume";
 ---
 
-<html>
-    <head>
-        <BaseHead title={title} description={description} />
-    </head>
-
-    <body class="flex flex-col gap-2 bg-slate-100">
+<LandingPage content={{ title: title, description: description }}>
+    <div
+        class="flex flex-col w-full gap-2 m-1 border-2 border-solid rounded-md bg-slate-100 font-display border-slate-600"
+    >
         <ResumeHeader
             email="mail@athulsuresh.com"
             name="Athul Suresh"
@@ -114,5 +112,5 @@ const description = "Resume";
                 },
             ]}
         />
-    </body>
-</html>
+    </div>
+</LandingPage>

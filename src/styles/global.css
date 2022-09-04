@@ -84,7 +84,6 @@
         @apply text-2xl;
         @apply mb-2;
         @apply mt-4;
-        @apply underline;
         @apply decoration-2;
     }
     h3 {
