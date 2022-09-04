@@ -1,12 +1,106 @@
 ---
 import ResumeHeader from "../components/resume/ResumeHeader.astro";
+import ResumeSection from "../components/resume/ResumeSection.astro";
+import BaseHead from "../components/BaseHead.astro";
+
+const title = "Resume";
+const description = "Resume";
 ---
 
-<h1>Beep. Boop. Resume coming soon</h1>
+<html>
+    <head>
+        <BaseHead title={title} description={description} />
+    </head>
 
-<ResumeHeader
-    website="athulsuresh.com"
-    name="Athul Suresh"
-    email="mail@athulsuresh.com"
-    phone="+91-8547314050"
-/>
+    <body class="flex flex-col gap-2 bg-slate-100">
+        <ResumeHeader
+            email="mail@athulsuresh.com"
+            name="Athul Suresh"
+            phone="+91-8547314050"
+            website="athulsuresh.com"
+        />
+        <ResumeSection
+            company="Setu"
+            duration="Oct. 2020 - Present"
+            location="Bengaluru, India"
+            title="Software Engineer III"
+            achievements={[
+                {
+                    summary: "Payments Platform Rewrite",
+                    description:
+                        "Headed the design and lead the team that developed and deployed the new system, which was certified by a government entity.  Moved to an async model which allowed the system to process 1.8x more transactions.",
+                },
+                {
+                    summary: "Settlement Engine Revamp",
+                    description:
+                        "Simplified and decoupled the reconciliation and settlement engine which moves more than 300 million rupees everyday, making it performant and unit testable.",
+                },
+                {
+                    summary: "Reports Improvements",
+                    description:
+                        "Redesigned the reporting system within payments into an incrementally updated system which reduced load on the system by almost 75%. Identified slow path queries and optimized them which reduced bursty spikes on the system by 50%",
+                },
+                {
+                    summary: "Improving the observability of Payments platform",
+                    description:
+                        "Headed the effort to improve the observability and debuggability of the platform by exporting application performance metrics and structured logs.",
+                },
+                {
+                    summary: "Payments Data Pipeline",
+                    description:
+                        "Set up the end to end data pipeline within payments, provisioning the infrastructure and creating the ETL jobs, providing visibility to business and external stakeholders",
+                },
+                {
+                    summary: "Quality Of Life Improvements",
+                    description:
+                        "Engaged in mentoring teammates and in improving the payments engineering process by pushing for rigorous code reviews, architectural decision records, and standard observability practices",
+                },
+                {
+                    summary: "",
+                    description: "",
+                },
+            ]}
+        />
+        <ResumeSection
+            company="Exotel"
+            duration="Jul. 2018 - Jul. 2020"
+            location="Bengaluru, India"
+            title="Software Engineer II"
+            achievements={[
+                {
+                    summary: "Telephony Layer Unification",
+                    description:
+                        "Headed the team which unified the telephone server infrastructure, enabling cross region AWS access which improved resource utilization and cost margins.",
+                },
+                {
+                    summary: "Automated Sanity Check",
+                    description:
+                        " Decreased the turn around time involved in bringing new telephone servers into production by automating the sanity checks, reducing overall effort involved from multiple hours to under 20 seconds.",
+                },
+                {
+                    summary: "Load Testing And Scaling Telephony Layer",
+                    description:
+                        "Formalized a framework for load testing telephone servers. Identified and fixed deadlocks in the process, enabling the telephony layer to handle higher call volumes.",
+                },
+                {
+                    summary: "On-Call Improvements",
+                    description:
+                        "Performed routine maintenance, alert resolution, handling of customer escalations, support ticket investigation and general firefighting as part of rotating on-call responsibilities within the voice team. Reduced operator downtime alert notification delay from 10 minutes to under a minute.",
+                },
+            ]}
+        />
+        <ResumeSection
+            company="Netapp"
+            duration="Jan 2018 - Jun 2018"
+            location="Bengaluru, India"
+            title="Intern"
+            achievements={[
+                {
+                    summary: "WAFL Iron",
+                    description:
+                        "Worked on fixing race conditions within the WAFL filesystem. Contributed fixes for Incremental Checksums for WAFL Directories.",
+                },
+            ]}
+        />
+    </body>
+</html>

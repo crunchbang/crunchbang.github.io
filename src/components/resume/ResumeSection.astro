@@ -1,0 +1,39 @@
+---
+export interface achievement {
+    summary: string;
+    description: string;
+}
+
+export interface Props {
+    company: string;
+    title: string;
+    location: string;
+    duration: string;
+    achievements: Array<achievement>;
+}
+
+const { company, title, location, duration, achievements } = Astro.props;
+---
+
+<div class="p-4 bg-white">
+    <section class="flex flex-col mb-4">
+        <div class="flex flex-row justify-between">
+            <div>{company}</div>
+            <div>{location}</div>
+        </div>
+        <div class="flex flex-row justify-between">
+            <div>{title}</div>
+            <div>{duration}</div>
+        </div>
+        <dl>
+            {
+                achievements.map((item) => (
+                    <>
+                        <dt class="font-semibold">{item.summary}</dt>
+                        <dd>{item.description} </dd>
+                    </>
+                ))
+            }
+        </dl>
+    </section>
+</div>

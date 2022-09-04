@@ -9,19 +9,13 @@ export interface Props {
 const { name, website, email, phone } = Astro.props;
 ---
 
-<section>
-    <div>
-        <div>{name}</div>
-        <div>{website}</div>
+<section class="flex flex-col p-4 bg-white">
+    <div class="flex flex-row items-baseline justify-between">
+        <div class="font-sans text-4xl font-bold">{name}</div>
+        <div>Email: {email}</div>
     </div>
-    <div>
-        <div>{email}</div>
-        <div>{phone}</div>
+    <div class="flex flex-row items-center justify-between">
+        <div>{website}</div>
+        <div>Mobile: {phone}</div>
     </div>
 </section>
-<style>
-    section {
-        display: flex;
-        justify-content: space-between;
-    }
-</style>
