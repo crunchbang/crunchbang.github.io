@@ -60,6 +60,7 @@
     }
     pre {
         padding: 1rem;
+        margin: 1.6rem 0px;
     }
     pre > code {
         all: unset;
